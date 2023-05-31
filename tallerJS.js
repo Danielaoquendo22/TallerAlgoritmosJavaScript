@@ -43,19 +43,34 @@
 // console.log ("Este es el orden de mayor a menor  " +  mayor +" , "+ medio +" , "+ menor)
 
 
-let perimetro =parseFloat(prompt("Ingresa el valor del perimetro"));
-let radio  = parseFloat(prompt("Ingresa el calor del radio"));
-let pI= 3.1416;
-let area;
-let rdoPerimetro;
+// let perimetro =parseFloat(prompt("Ingresa el valor del perimetro"));
+// let radio  = parseFloat(prompt("Ingresa el calor del radio"));
+// let pI= 3.1416;
+// let area;
+// let rdoPerimetro;
 
-rdoPerimetro= (perimetro*pI)*radio;
+// rdoPerimetro= (perimetro*pI)*radio;
 
-area= (rdoPerimetro*radio)/2;
+// area= (rdoPerimetro*radio)/2;
 
 
 
-console.log("El area del circulo es de:" + area + " " + "cm2");
+// console.log("El area del circulo es de:" + area + " " + "cm2");
+
+let ladoUno= parseFloat(prompt("Ingrese el valor del lado uno: "));
+let ladoDos= parseFloat(prompt("Ingrese el valor del lado dos: "));
+let ladoTres= parseFloat(prompt("Ingrese el valor del lado tres: "));
+
+if (ladoUno == ladoDos && ladoUno ==ladoTres && ladoDos == ladoTres){
+    console.log("Es un triangulo Equilatero")      
+}else{
+    if(ladoUno !=ladoDos && ladoUno !=ladoTres && ladoDos == ladoTres){
+        console.log("Es un triangulo Isosceles")
+    }else{
+        if (ladoUno !=ladoDos && ladoUno!= ladoTres && ladoDos != ladoTres)
+            console.log("Es un triangulo Escaleno")
+        }
+    }
 
 
 

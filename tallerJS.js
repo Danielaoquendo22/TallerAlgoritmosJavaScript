@@ -114,7 +114,33 @@ function calDivisor(numero) {
 
 
 
+//punto 5
 
+function obtenerTotal(valorUnidad, cantidad) {
+    let subtotal = valorUnidad * cantidad;
+    let iva = subtotal * 0.19;
+  
+    let valorTotal = subtotal + iva;
+  
+    if (valorTotal > 500000 && valorTotal < 1000000 ) {
+      valorTotal = valorTotal - iva;
+    }
+  
+    if (valorTotal > 1000000) {
+      valorTotal = valorTotal*0.90;
+    }
+  
+     
+  console.log(`El valor de la compra total es: ${valorTotal}`);
+  console.log(`Las cantidades son : ${cantidad}`);
+  console.log(`El iva de la transaccion es : ${iva}`);
+  }
+  
+  
+  let precio = parseFloat(prompt("Ingrese el precio del producto: "));
+  let cantidad = parseInt(prompt("Ingrese la cantidad de productos: "));
+  
+  obtenerTotal(precio, cantidad);
   
 
   

@@ -142,7 +142,74 @@ function obtenerTotal(valorUnidad, cantidad) {
   
   obtenerTotal(precio, cantidad);
   
+//punto 6
 
+
+function calcularNotaFinal(nota1, nota2, nota3, nota4) {
+        
+    let notaFinal
+  
+    
+    if (nota4 === 5) {
+      if ((nota1 + 1)<=5 ){
+        nota1 = nota1 + 1
+      }else {
+        nota1 = 5
+      }
+      if ((nota2 + 1)<=5 ){
+        nota2 = nota2 + 1
+      }else {
+        nota2 = 5
+      }
+      if ((nota3 + 1)<=5 ){
+        nota3 = nota3 + 1
+      }else {
+        nota3 = 5
+      }
+
+    }
+
+    notaFinal = nota1 * 0.1 + nota2 * 0.2 + nota3 * 0.3 + nota4 * 0.4;
+  
+   
+  
+   
+  
+   
+    if (notaFinal > 3.5) {
+        console.log(`El estudiante con nota  ${notaFinal} gano la materia`);
+       
+    } else {
+        console.log(`El estudiante con nota  ${notaFinal} perdio la materia`);
+    }
+
+    console.log(`Nota 1 ${nota1} `);
+    console.log(`Nota 2 ${nota2} `);
+    console.log(`Nota 3 ${nota3} `);
+    console.log(`Nota 4 ${nota4} `);
+  }
+  
+ let nota1
+ let nota2 
+ let nota3 
+ let nota4 
+  
+  do {
+    nota1 = parseFloat(prompt(`Ingrese la nota numero 1 Debe ser un numero de 0 a 5:`));
+  } while (nota1 < 0 || nota1 > 5);
+  do {
+    nota2 = parseFloat(prompt(`Ingrese la nota numero 2 Debe ser un numero de 0 a 5:`));
+  } while (nota2 < 0 || nota2 > 5);
+  do {
+    nota3 = parseFloat(prompt(`Ingrese la nota numero 3 Debe ser un numero de 0 a 5:`));
+  } while (nota3 < 0 || nota3 > 5);
+  do {
+    nota4 = parseFloat(prompt(`Ingrese la nota numero 4 Debe ser un numero de 0 a 5:`));
+  } while (nota4 < 0 || nota4 > 5);
+
+
+  
+  let resultado = calcularNotaFinal(nota1, nota2, nota3, nota4);
   
       
       
